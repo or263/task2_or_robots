@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Mission.cs" />
     <Compile Include="Robots\RobotFly.cs" />
+    <Compile Include="task2_or_final.cs" />
     <Compile Include="UcMissions.xaml.cs">
       <DependentUpon>UcMissions.xaml</DependentUpon>
     </Compile>
@@ -106,10 +107,6 @@
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="WndLogin.xaml.cs">
-      <DependentUpon>WndLogin.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="WndMain.xaml">

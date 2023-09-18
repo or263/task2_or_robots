@@ -30,8 +30,9 @@ namespace Robots_inc
             activeWorkers = lw;
             activeMissions = lm;
             activeRobots = lr;
-            this.Content = null;
-            this.Content = worker = w;
+            this.DataContext = null;
+            this.DataContext = worker = w;
+            LoadWorkerInfo();
         }
 
         private void LoadWorkerInfo()
@@ -43,13 +44,13 @@ namespace Robots_inc
                 rule = "Operation Manager";
             else
                 rule = "Operational Worker";
-            tbHeader.Text = worker.ToString()+" "+rule;
+            tbHeader.Text = worker.getFullName() + " " + rule;
 
             //Menu by rule
             switch (rule)
             {
                 case "Operational Worker":  //hide all and load mission page
-                    workPanel.Children.Add(new UcMission());
+                    workPanel.Children.Add(new UcMissions(worker, activeMissions[0]));
                     mnMain.Visibility = Visibility.Hidden;
                     break;
                 case "Operation Manager":   //hide robot and worker menu
